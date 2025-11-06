@@ -10,8 +10,6 @@ import SwiftUI
 struct NewsListView: View {
     @StateObject private var viewModel = NewsViewModel()
     
-    @State private var articles: [NewsArticle] = [.sample]
-    
     var body: some View {
         
         NavigationStack {
@@ -88,18 +86,5 @@ struct ThumbnailView: View {
                 .overlay(Image(systemName: "photo").foregroundColor(.white))
         }
     }
-}
-
-extension NewsArticle {
-    static let sample = NewsArticle(
-        source: NewsSource( id: "dsds", name: "The Times of India"),
-        author: "Reuters",
-        title: "Samsung SDI says discussing supplying Tesla with ESS batteries",
-        description: "Samsung SDI is in discussions to supply Tesla with energy storage system batteries. This potential deal is valued at over two billion dollars. The agreement would help Tesla reduce its dependence on China for crucial components. South Korean battery makers ar…",
-        url: "https://economictimes.indiatimes.com/news/international/business/samsung-sdi-says-discussing-supplying-tesla-with-ess-batteries/articleshow/125073466.cms",
-        urlToImage: "https://img.etimg.com/thumb/msid-125073520,width-1200,height-630,imgsize-5606,overlay-economictimes/articleshow.jpg",
-        publishedAt: "2025-11-04T02:54:38Z",
-        content: "South Korea's Samsung SDI is discussing supplying ESS (Energy Storage System) batteries to Tesla in an order reported to be worth around 3 trillion won ($2.11 billion) or more.The deal, if signed, wo… [+848 chars]"
-    )
 }
 
